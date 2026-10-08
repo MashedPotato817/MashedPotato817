@@ -1,3 +1,7 @@
 # 临时文件
 tmp/*
 !tmp/.gitkeep
+
+# Python 本地缓存
+__pycache__/
+*.pyc
