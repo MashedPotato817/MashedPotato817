@@ -15,4 +15,4 @@
 
 `profile-*.svg` 和 `project-*.svg` 为本仓库的原创矢量图形。横幅提供深浅色与静态版本；修改时同步检查四个版本及减少动态效果设置。
 
-`activity-*.svg` 由 `scripts/update_activity.py` 生成。桌面与窄屏版式使用同一份贡献数据，自动更新工作流同时保存四个文件。
+`activity-*.svg` 由 `scripts/update_activity.py` 生成。同一份贡献数据生成深浅色、桌面与窄屏、动画与静态共八个文件。展示总贡献、活跃天数和 31 天柱条，依次亮起一次后静止。零贡献日显示基线；README 根据减少动态效果设置选择静态文件。

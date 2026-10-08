@@ -67,11 +67,15 @@
 
 <a href="https://github.com/MashedPotato817?tab=overview">
   <picture>
+    <source media="(max-width: 600px) and (prefers-color-scheme: dark) and (prefers-reduced-motion: reduce)" srcset="assets/activity-dark-mobile-static.svg">
+    <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="assets/activity-light-mobile-static.svg">
+    <source media="(prefers-color-scheme: dark) and (prefers-reduced-motion: reduce)" srcset="assets/activity-dark-static.svg">
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/activity-light-static.svg">
     <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/activity-dark-mobile.svg">
     <source media="(max-width: 600px)" srcset="assets/activity-light-mobile.svg">
     <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="assets/activity-light.svg">
-    <img alt="MashedPotato817 最近 31 天的 GitHub 每日贡献活动折线图" src="assets/activity-light.svg" width="100%">
+    <img alt="MashedPotato817 最近 31 天的 GitHub 贡献节奏卡" src="assets/activity-light.svg" width="100%">
   </picture>
 </a>
 

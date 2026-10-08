@@ -1,10 +1,9 @@
-"""从 GitHub 公开贡献日历生成近 31 天的浅色与深色活动折线图。"""
+"""从 GitHub 公开贡献日历生成近 31 天的浅色与深色贡献节奏卡。"""
 
 import argparse
 from datetime import date, datetime, timedelta, timezone
 from html import escape
 from html.parser import HTMLParser
-import math
 from pathlib import Path
 import re
 from urllib.request import Request, urlopen
@@ -42,49 +41,45 @@ class ContributionCalendar(HTMLParser):
         self.tooltip = None
 
 
-def render_svg(username, days, counts, dark, compact=False):
-    background, foreground, grid, green = (
-        ("#0d1117", "#c9d1d9", "#30363d", "#2dd4bf")
-        if dark else ("#ffffff", "#57606a", "#d8dee4", "#0d9488")
+def render_svg(username, days, counts, dark, compact=False, animated=True):
+    background, foreground, muted, accent = (
+        ("#0d1117", "#e6edf3", "#30363d", "#2dd4bf")
+        if dark else ("#ffffff", "#24292f", "#d8dee4", "#0d9488")
     )
     width = 400 if compact else 800
-    left, right, top, bottom = (64, 380, 92, 205) if compact else (55, 775, 55, 205)
-    step = max(1, math.ceil(max(counts) / 4))
-    ceiling = step * 4
-    points = [
-        (left + i * (right - left) / 30, bottom - value * (bottom - top) / ceiling)
-        for i, value in enumerate(counts)
-    ]
-    description = f"{username}: {days[0]} to {days[-1]}, {sum(counts)} contributions."
+    margin = 24 if compact else 36
+    bottom, top = 202, 116
+    slot = (width - 2 * margin) / 31
+    active = sum(value > 0 for value in counts)
+    description = f"{username}: {days[0]} to {days[-1]}, {sum(counts)} contributions. {active} active days."
     svg = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="260" viewBox="0 0 {width} 260" role="img" aria-labelledby="title description">',
-        '<title id="title">GitHub Activity · Last 31 Days</title>',
+        '<title id="title">GitHub 贡献节奏 · 近 31 天</title>',
         f'<desc id="description">{escape(description)}</desc>',
-        f'<rect width="{width}" height="260" rx="8" fill="{background}"/>',
-        f'<g font-family="Arial, Microsoft YaHei, sans-serif" font-size="{14 if compact else 11}" fill="{foreground}">',
+        f'<rect width="{width}" height="260" rx="12" fill="{background}"/>',
     ]
-    if compact:
-        svg.append('<text x="20" y="27" font-size="18" font-weight="600">GitHub 活动 · 近 31 天</text>')
-        svg.append(f'<text x="20" y="65" font-size="26" font-weight="600">{sum(counts)} 次贡献</text>')
-    else:
-        svg.append('<text x="55" y="25" font-size="15" font-weight="600">GitHub Activity · Last 31 Days</text>')
-        svg.append(f'<text x="775" y="25" text-anchor="end">{sum(counts)} contributions</text>')
-    for i in range(5):
-        y = bottom - i * (bottom - top) / 4
-        svg.append(f'<path d="M {left} {y} H {right}" stroke="{grid}" stroke-dasharray="3 4"/>')
-        svg.append(f'<text x="{left - 12}" y="{y + 4}" text-anchor="end">{step * i}</text>')
+    if animated:
+        svg.append('<style>@keyframes light-up { from { opacity: .18; } to { opacity: 1; } } .day-bar { animation: light-up .6s ease-out both; } @media (prefers-reduced-motion: reduce) { .day-bar { animation: none; } }</style>')
+    svg.extend([
+        f'<g font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" fill="{foreground}">',
+        f'<text x="{margin}" y="29" font-size="18" font-weight="600">GitHub 贡献节奏 · 近 31 天</text>',
+        f'<text id="total-contributions" x="{margin}" y="73" font-size="32" font-weight="600">{sum(counts)}</text>',
+        f'<text x="{margin}" y="96">总贡献</text>',
+        f'<text id="active-days" x="{width // 2}" y="73" font-size="32" font-weight="600">{active}</text>',
+        f'<text x="{width // 2}" y="96">活跃天数</text>',
+    ])
     for i in range(0, 31, 10 if compact else 5):
-        svg.append(f'<text x="{points[i][0]:.1f}" y="226" text-anchor="middle">{days[i][5:].replace("-", "/")}</text>')
-    if compact:
-        svg.append(f'<text x="20" y="251">更新 {days[-1]} UTC</text>')
-    else:
-        svg.append(f'<text x="55" y="247">Daily contributions · Updated {days[-1]} UTC</text>')
+        x = margin + (i + .5) * slot
+        svg.append(f'<text x="{x:.2f}" y="225" text-anchor="middle">{days[i][5:].replace("-", "/")}</text>')
+    svg.append(f'<text x="{margin}" y="250">更新 {days[-1]} UTC</text>')
     svg.append('</g>')
-    coordinates = " ".join(f"{x:.1f},{y:.1f}" for x, y in points)
-    svg.append(f'<polygon points="{left},{bottom} {coordinates} {right},{bottom}" fill="{green}" opacity="0.12"/>')
-    svg.append(f'<polyline points="{coordinates}" fill="none" stroke="{green}" stroke-width="2" stroke-linejoin="round"/>')
-    for day, count, (x, y) in zip(days, counts, points):
-        svg.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="2.5" fill="{green}"><title>{day}: {count} contributions</title></circle>')
+    peak = max(1, max(counts))
+    for i, (day, count) in enumerate(zip(days, counts)):
+        height = max(2, count / peak * (bottom - top))
+        x = margin + i * slot + slot * .15
+        delay = f' style="animation-delay: {i * .035:.3f}s"' if animated else ''
+        fill = accent if count else muted
+        svg.append(f'<rect class="day-bar" x="{x:.2f}" y="{bottom - height:.2f}" width="{slot * .7:.2f}" height="{height:.2f}" rx="2" fill="{fill}"{delay}><title>{day}: {count} contributions</title></rect>')
     svg.append('</svg>')
     return "\n".join(svg) + "\n"
 
@@ -114,8 +109,8 @@ def main():
         raise ValueError(f"贡献日历缺少 {len(missing)} 天的数据，保留已有图表")
     counts = [calendar.counts[day] for day in days]
     images = {
-        f"{theme}{'-mobile' if compact else ''}": render_svg(args.username, days, counts, theme == "dark", compact)
-        for theme in ("light", "dark") for compact in (False, True)
+        f"{theme}{'-mobile' if compact else ''}{'-static' if not animated else ''}": render_svg(args.username, days, counts, theme == "dark", compact, animated)
+        for theme in ("light", "dark") for compact in (False, True) for animated in (True, False)
     }
     args.output.mkdir(parents=True, exist_ok=True)
     for theme, image in images.items():

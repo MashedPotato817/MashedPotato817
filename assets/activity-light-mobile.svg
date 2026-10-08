@@ -1,57 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="260" viewBox="0 0 400 260" role="img" aria-labelledby="title description">
-<title id="title">GitHub Activity · Last 31 Days</title>
-<desc id="description">MashedPotato817: 2026-09-08 to 2026-10-08, 412 contributions.</desc>
-<rect width="400" height="260" rx="8" fill="#ffffff"/>
-<g font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" fill="#57606a">
-<text x="20" y="27" font-size="18" font-weight="600">GitHub 活动 · 近 31 天</text>
-<text x="20" y="65" font-size="26" font-weight="600">412 次贡献</text>
-<path d="M 64 205.0 H 380" stroke="#d8dee4" stroke-dasharray="3 4"/>
-<text x="52" y="209.0" text-anchor="end">0</text>
-<path d="M 64 176.75 H 380" stroke="#d8dee4" stroke-dasharray="3 4"/>
-<text x="52" y="180.75" text-anchor="end">32</text>
-<path d="M 64 148.5 H 380" stroke="#d8dee4" stroke-dasharray="3 4"/>
-<text x="52" y="152.5" text-anchor="end">64</text>
-<path d="M 64 120.25 H 380" stroke="#d8dee4" stroke-dasharray="3 4"/>
-<text x="52" y="124.25" text-anchor="end">96</text>
-<path d="M 64 92.0 H 380" stroke="#d8dee4" stroke-dasharray="3 4"/>
-<text x="52" y="96.0" text-anchor="end">128</text>
-<text x="64.0" y="226" text-anchor="middle">09/08</text>
-<text x="169.3" y="226" text-anchor="middle">09/18</text>
-<text x="274.7" y="226" text-anchor="middle">09/28</text>
-<text x="380.0" y="226" text-anchor="middle">10/08</text>
-<text x="20" y="251">更新 2026-10-08 UTC</text>
+<title id="title">GitHub 贡献节奏 · 近 31 天</title>
+<desc id="description">MashedPotato817: 2026-09-08 to 2026-10-08, 412 contributions. 19 active days.</desc>
+<rect width="400" height="260" rx="12" fill="#ffffff"/>
+<style>@keyframes light-up { from { opacity: .18; } to { opacity: 1; } } .day-bar { animation: light-up .6s ease-out both; } @media (prefers-reduced-motion: reduce) { .day-bar { animation: none; } }</style>
+<g font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" fill="#24292f">
+<text x="24" y="29" font-size="18" font-weight="600">GitHub 贡献节奏 · 近 31 天</text>
+<text id="total-contributions" x="24" y="73" font-size="32" font-weight="600">412</text>
+<text x="24" y="96">总贡献</text>
+<text id="active-days" x="200" y="73" font-size="32" font-weight="600">19</text>
+<text x="200" y="96">活跃天数</text>
+<text x="29.68" y="225" text-anchor="middle">09/08</text>
+<text x="143.23" y="225" text-anchor="middle">09/18</text>
+<text x="256.77" y="225" text-anchor="middle">09/28</text>
+<text x="370.32" y="225" text-anchor="middle">10/08</text>
+<text x="24" y="250">更新 2026-10-08 UTC</text>
 </g>
-<polygon points="64,205 64.0,197.9 74.5,197.1 85.1,184.7 95.6,172.3 106.1,163.5 116.7,92.9 127.2,205.0 137.7,199.7 148.3,205.0 158.8,197.1 169.3,205.0 179.9,205.0 190.4,199.7 200.9,205.0 211.5,205.0 222.0,205.0 232.5,205.0 243.1,205.0 253.6,205.0 264.1,204.1 274.7,192.6 285.2,196.2 295.7,189.1 306.3,167.9 316.8,187.3 327.3,203.2 337.9,205.0 348.4,203.2 358.9,192.6 369.5,205.0 380.0,190.0 380,205" fill="#0d9488" opacity="0.12"/>
-<polyline points="64.0,197.9 74.5,197.1 85.1,184.7 95.6,172.3 106.1,163.5 116.7,92.9 127.2,205.0 137.7,199.7 148.3,205.0 158.8,197.1 169.3,205.0 179.9,205.0 190.4,199.7 200.9,205.0 211.5,205.0 222.0,205.0 232.5,205.0 243.1,205.0 253.6,205.0 264.1,204.1 274.7,192.6 285.2,196.2 295.7,189.1 306.3,167.9 316.8,187.3 327.3,203.2 337.9,205.0 348.4,203.2 358.9,192.6 369.5,205.0 380.0,190.0" fill="none" stroke="#0d9488" stroke-width="2" stroke-linejoin="round"/>
-<circle cx="64.0" cy="197.9" r="2.5" fill="#0d9488"><title>2026-09-08: 8 contributions</title></circle>
-<circle cx="74.5" cy="197.1" r="2.5" fill="#0d9488"><title>2026-09-09: 9 contributions</title></circle>
-<circle cx="85.1" cy="184.7" r="2.5" fill="#0d9488"><title>2026-09-10: 23 contributions</title></circle>
-<circle cx="95.6" cy="172.3" r="2.5" fill="#0d9488"><title>2026-09-11: 37 contributions</title></circle>
-<circle cx="106.1" cy="163.5" r="2.5" fill="#0d9488"><title>2026-09-12: 47 contributions</title></circle>
-<circle cx="116.7" cy="92.9" r="2.5" fill="#0d9488"><title>2026-09-13: 127 contributions</title></circle>
-<circle cx="127.2" cy="205.0" r="2.5" fill="#0d9488"><title>2026-09-14: 0 contributions</title></circle>
-<circle cx="137.7" cy="199.7" r="2.5" fill="#0d9488"><title>2026-09-15: 6 contributions</title></circle>
-<circle cx="148.3" cy="205.0" r="2.5" fill="#0d9488"><title>2026-09-16: 0 contributions</title></circle>
-<circle cx="158.8" cy="197.1" r="2.5" fill="#0d9488"><title>2026-09-17: 9 contributions</title></circle>
-<circle cx="169.3" cy="205.0" r="2.5" fill="#0d9488"><title>2026-09-18: 0 contributions</title></circle>
-<circle cx="179.9" cy="205.0" r="2.5" fill="#0d9488"><title>2026-09-19: 0 contributions</title></circle>
-<circle cx="190.4" cy="199.7" r="2.5" fill="#0d9488"><title>2026-09-20: 6 contributions</title></circle>
-<circle cx="200.9" cy="205.0" r="2.5" fill="#0d9488"><title>2026-09-21: 0 contributions</title></circle>
-<circle cx="211.5" cy="205.0" r="2.5" fill="#0d9488"><title>2026-09-22: 0 contributions</title></circle>
-<circle cx="222.0" cy="205.0" r="2.5" fill="#0d9488"><title>2026-09-23: 0 contributions</title></circle>
-<circle cx="232.5" cy="205.0" r="2.5" fill="#0d9488"><title>2026-09-24: 0 contributions</title></circle>
-<circle cx="243.1" cy="205.0" r="2.5" fill="#0d9488"><title>2026-09-25: 0 contributions</title></circle>
-<circle cx="253.6" cy="205.0" r="2.5" fill="#0d9488"><title>2026-09-26: 0 contributions</title></circle>
-<circle cx="264.1" cy="204.1" r="2.5" fill="#0d9488"><title>2026-09-27: 1 contributions</title></circle>
-<circle cx="274.7" cy="192.6" r="2.5" fill="#0d9488"><title>2026-09-28: 14 contributions</title></circle>
-<circle cx="285.2" cy="196.2" r="2.5" fill="#0d9488"><title>2026-09-29: 10 contributions</title></circle>
-<circle cx="295.7" cy="189.1" r="2.5" fill="#0d9488"><title>2026-09-30: 18 contributions</title></circle>
-<circle cx="306.3" cy="167.9" r="2.5" fill="#0d9488"><title>2026-10-01: 42 contributions</title></circle>
-<circle cx="316.8" cy="187.3" r="2.5" fill="#0d9488"><title>2026-10-02: 20 contributions</title></circle>
-<circle cx="327.3" cy="203.2" r="2.5" fill="#0d9488"><title>2026-10-03: 2 contributions</title></circle>
-<circle cx="337.9" cy="205.0" r="2.5" fill="#0d9488"><title>2026-10-04: 0 contributions</title></circle>
-<circle cx="348.4" cy="203.2" r="2.5" fill="#0d9488"><title>2026-10-05: 2 contributions</title></circle>
-<circle cx="358.9" cy="192.6" r="2.5" fill="#0d9488"><title>2026-10-06: 14 contributions</title></circle>
-<circle cx="369.5" cy="205.0" r="2.5" fill="#0d9488"><title>2026-10-07: 0 contributions</title></circle>
-<circle cx="380.0" cy="190.0" r="2.5" fill="#0d9488"><title>2026-10-08: 17 contributions</title></circle>
+<rect class="day-bar" x="25.70" y="196.58" width="7.95" height="5.42" rx="2" fill="#0d9488" style="animation-delay: 0.000s"><title>2026-09-08: 8 contributions</title></rect>
+<rect class="day-bar" x="37.06" y="195.91" width="7.95" height="6.09" rx="2" fill="#0d9488" style="animation-delay: 0.035s"><title>2026-09-09: 9 contributions</title></rect>
+<rect class="day-bar" x="48.41" y="186.43" width="7.95" height="15.57" rx="2" fill="#0d9488" style="animation-delay: 0.070s"><title>2026-09-10: 23 contributions</title></rect>
+<rect class="day-bar" x="59.77" y="176.94" width="7.95" height="25.06" rx="2" fill="#0d9488" style="animation-delay: 0.105s"><title>2026-09-11: 37 contributions</title></rect>
+<rect class="day-bar" x="71.12" y="170.17" width="7.95" height="31.83" rx="2" fill="#0d9488" style="animation-delay: 0.140s"><title>2026-09-12: 47 contributions</title></rect>
+<rect class="day-bar" x="82.48" y="116.00" width="7.95" height="86.00" rx="2" fill="#0d9488" style="animation-delay: 0.175s"><title>2026-09-13: 127 contributions</title></rect>
+<rect class="day-bar" x="93.83" y="200.00" width="7.95" height="2.00" rx="2" fill="#d8dee4" style="animation-delay: 0.210s"><title>2026-09-14: 0 contributions</title></rect>
+<rect class="day-bar" x="105.19" y="197.94" width="7.95" height="4.06" rx="2" fill="#0d9488" style="animation-delay: 0.245s"><title>2026-09-15: 6 contributions</title></rect>
+<rect class="day-bar" x="116.54" y="200.00" width="7.95" height="2.00" rx="2" fill="#d8dee4" style="animation-delay: 0.280s"><title>2026-09-16: 0 contributions</title></rect>
+<rect class="day-bar" x="127.90" y="195.91" width="7.95" height="6.09" rx="2" fill="#0d9488" style="animation-delay: 0.315s"><title>2026-09-17: 9 contributions</title></rect>
+<rect class="day-bar" x="139.25" y="200.00" width="7.95" height="2.00" rx="2" fill="#d8dee4" style="animation-delay: 0.350s"><title>2026-09-18: 0 contributions</title></rect>
+<rect class="day-bar" x="150.61" y="200.00" width="7.95" height="2.00" rx="2" fill="#d8dee4" style="animation-delay: 0.385s"><title>2026-09-19: 0 contributions</title></rect>
+<rect class="day-bar" x="161.96" y="197.94" width="7.95" height="4.06" rx="2" fill="#0d9488" style="animation-delay: 0.420s"><title>2026-09-20: 6 contributions</title></rect>
+<rect class="day-bar" x="173.32" y="200.00" width="7.95" height="2.00" rx="2" fill="#d8dee4" style="animation-delay: 0.455s"><title>2026-09-21: 0 contributions</title></rect>
+<rect class="day-bar" x="184.67" y="200.00" width="7.95" height="2.00" rx="2" fill="#d8dee4" style="animation-delay: 0.490s"><title>2026-09-22: 0 contributions</title></rect>
+<rect class="day-bar" x="196.03" y="200.00" width="7.95" height="2.00" rx="2" fill="#d8dee4" style="animation-delay: 0.525s"><title>2026-09-23: 0 contributions</title></rect>
+<rect class="day-bar" x="207.38" y="200.00" width="7.95" height="2.00" rx="2" fill="#d8dee4" style="animation-delay: 0.560s"><title>2026-09-24: 0 contributions</title></rect>
+<rect class="day-bar" x="218.74" y="200.00" width="7.95" height="2.00" rx="2" fill="#d8dee4" style="animation-delay: 0.595s"><title>2026-09-25: 0 contributions</title></rect>
+<rect class="day-bar" x="230.09" y="200.00" width="7.95" height="2.00" rx="2" fill="#d8dee4" style="animation-delay: 0.630s"><title>2026-09-26: 0 contributions</title></rect>
+<rect class="day-bar" x="241.45" y="200.00" width="7.95" height="2.00" rx="2" fill="#0d9488" style="animation-delay: 0.665s"><title>2026-09-27: 1 contributions</title></rect>
+<rect class="day-bar" x="252.80" y="192.52" width="7.95" height="9.48" rx="2" fill="#0d9488" style="animation-delay: 0.700s"><title>2026-09-28: 14 contributions</title></rect>
+<rect class="day-bar" x="264.15" y="195.23" width="7.95" height="6.77" rx="2" fill="#0d9488" style="animation-delay: 0.735s"><title>2026-09-29: 10 contributions</title></rect>
+<rect class="day-bar" x="275.51" y="189.81" width="7.95" height="12.19" rx="2" fill="#0d9488" style="animation-delay: 0.770s"><title>2026-09-30: 18 contributions</title></rect>
+<rect class="day-bar" x="286.86" y="173.56" width="7.95" height="28.44" rx="2" fill="#0d9488" style="animation-delay: 0.805s"><title>2026-10-01: 42 contributions</title></rect>
+<rect class="day-bar" x="298.22" y="188.46" width="7.95" height="13.54" rx="2" fill="#0d9488" style="animation-delay: 0.840s"><title>2026-10-02: 20 contributions</title></rect>
+<rect class="day-bar" x="309.57" y="200.00" width="7.95" height="2.00" rx="2" fill="#0d9488" style="animation-delay: 0.875s"><title>2026-10-03: 2 contributions</title></rect>
+<rect class="day-bar" x="320.93" y="200.00" width="7.95" height="2.00" rx="2" fill="#d8dee4" style="animation-delay: 0.910s"><title>2026-10-04: 0 contributions</title></rect>
+<rect class="day-bar" x="332.28" y="200.00" width="7.95" height="2.00" rx="2" fill="#0d9488" style="animation-delay: 0.945s"><title>2026-10-05: 2 contributions</title></rect>
+<rect class="day-bar" x="343.64" y="192.52" width="7.95" height="9.48" rx="2" fill="#0d9488" style="animation-delay: 0.980s"><title>2026-10-06: 14 contributions</title></rect>
+<rect class="day-bar" x="354.99" y="200.00" width="7.95" height="2.00" rx="2" fill="#d8dee4" style="animation-delay: 1.015s"><title>2026-10-07: 0 contributions</title></rect>
+<rect class="day-bar" x="366.35" y="190.49" width="7.95" height="11.51" rx="2" fill="#0d9488" style="animation-delay: 1.050s"><title>2026-10-08: 17 contributions</title></rect>
 </svg>
