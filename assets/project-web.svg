@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" aria-labelledby="title">
+  <title id="title">Web 实践</title>
+  <rect x="1" y="1" width="30" height="30" rx="8" fill="#ecfeff" stroke="#a5f3fc"/>
+  <g fill="none" stroke="#0e7490" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="7" y="8" width="18" height="16" rx="2"/>
+    <path d="M7 13 H25 M11 10.5 H12 m1 6-2 2 2 2 m6-4 2 2-2 2"/>
+  </g>
+</svg>

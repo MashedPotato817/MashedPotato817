@@ -42,12 +42,13 @@ class ContributionCalendar(HTMLParser):
         self.tooltip = None
 
 
-def render_svg(username, days, counts, dark):
+def render_svg(username, days, counts, dark, compact=False):
     background, foreground, grid, green = (
-        ("#0d1117", "#c9d1d9", "#30363d", "#39d353")
-        if dark else ("#ffffff", "#57606a", "#d8dee4", "#216e39")
+        ("#0d1117", "#c9d1d9", "#30363d", "#2dd4bf")
+        if dark else ("#ffffff", "#57606a", "#d8dee4", "#0d9488")
     )
-    left, right, top, bottom = 55, 775, 55, 205
+    width = 400 if compact else 800
+    left, right, top, bottom = (64, 380, 92, 205) if compact else (55, 775, 55, 205)
     step = max(1, math.ceil(max(counts) / 4))
     ceiling = step * 4
     points = [
@@ -56,21 +57,28 @@ def render_svg(username, days, counts, dark):
     ]
     description = f"{username}: {days[0]} to {days[-1]}, {sum(counts)} contributions."
     svg = [
-        '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="260" viewBox="0 0 800 260" role="img" aria-labelledby="title description">',
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="260" viewBox="0 0 {width} 260" role="img" aria-labelledby="title description">',
         '<title id="title">GitHub Activity · Last 31 Days</title>',
         f'<desc id="description">{escape(description)}</desc>',
-        f'<rect width="800" height="260" rx="8" fill="{background}"/>',
-        f'<g font-family="Arial, sans-serif" font-size="11" fill="{foreground}">',
-        '<text x="55" y="25" font-size="15" font-weight="600">GitHub Activity · Last 31 Days</text>',
-        f'<text x="775" y="25" text-anchor="end">{sum(counts)} contributions</text>',
+        f'<rect width="{width}" height="260" rx="8" fill="{background}"/>',
+        f'<g font-family="Arial, Microsoft YaHei, sans-serif" font-size="{14 if compact else 11}" fill="{foreground}">',
     ]
+    if compact:
+        svg.append('<text x="20" y="27" font-size="18" font-weight="600">GitHub 活动 · 近 31 天</text>')
+        svg.append(f'<text x="20" y="65" font-size="26" font-weight="600">{sum(counts)} 次贡献</text>')
+    else:
+        svg.append('<text x="55" y="25" font-size="15" font-weight="600">GitHub Activity · Last 31 Days</text>')
+        svg.append(f'<text x="775" y="25" text-anchor="end">{sum(counts)} contributions</text>')
     for i in range(5):
         y = bottom - i * (bottom - top) / 4
         svg.append(f'<path d="M {left} {y} H {right}" stroke="{grid}" stroke-dasharray="3 4"/>')
-        svg.append(f'<text x="43" y="{y + 4}" text-anchor="end">{step * i}</text>')
-    for i in range(0, 31, 5):
+        svg.append(f'<text x="{left - 12}" y="{y + 4}" text-anchor="end">{step * i}</text>')
+    for i in range(0, 31, 10 if compact else 5):
         svg.append(f'<text x="{points[i][0]:.1f}" y="226" text-anchor="middle">{days[i][5:].replace("-", "/")}</text>')
-    svg.append(f'<text x="55" y="247">Daily contributions · Updated {days[-1]} UTC</text>')
+    if compact:
+        svg.append(f'<text x="20" y="251">更新 {days[-1]} UTC</text>')
+    else:
+        svg.append(f'<text x="55" y="247">Daily contributions · Updated {days[-1]} UTC</text>')
     svg.append('</g>')
     coordinates = " ".join(f"{x:.1f},{y:.1f}" for x, y in points)
     svg.append(f'<polygon points="{left},{bottom} {coordinates} {right},{bottom}" fill="{green}" opacity="0.12"/>')
@@ -105,7 +113,10 @@ def main():
     if missing:
         raise ValueError(f"贡献日历缺少 {len(missing)} 天的数据，保留已有图表")
     counts = [calendar.counts[day] for day in days]
-    images = {theme: render_svg(args.username, days, counts, theme == "dark") for theme in ("light", "dark")}
+    images = {
+        f"{theme}{'-mobile' if compact else ''}": render_svg(args.username, days, counts, theme == "dark", compact)
+        for theme in ("light", "dark") for compact in (False, True)
+    }
     args.output.mkdir(parents=True, exist_ok=True)
     for theme, image in images.items():
         (args.output / f"activity-{theme}.svg").write_text(image, encoding="utf-8")
