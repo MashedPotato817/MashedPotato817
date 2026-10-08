@@ -10,8 +10,6 @@
 
 在这里分享项目实践、工具探索和学习记录。
 
-[精选项目](#精选项目) · [入门指南](https://mashedpotato817.github.io/software-handbook/) · [全部仓库](https://github.com/MashedPotato817?tab=repositories)
-
 ## 精选项目
 
 ### <img src="assets/project-tools.svg" width="24" height="24" alt=""> [dsh-git-plugin](https://github.com/MashedPotato817/dsh-git-plugin) · 开发工具
@@ -44,8 +42,6 @@
 - [Git：Windows 安装、必要配置与验证](https://mashedpotato817.github.io/software-handbook/pages/git/install.html)：试写草稿，待维护者修改与人工安装验证。
 
 ## 技术栈
-
-项目中使用与学习的技术：
 
 **语言与 Web**
 
