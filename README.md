@@ -1,5 +1,3 @@
-# Hi, I'm MashedPotato817
-
 <picture>
   <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="assets/profile-dark-static.svg">
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/profile-light-static.svg">
@@ -11,6 +9,8 @@
 南京师范大学本科生，关注 AI 开发工具、嵌入式与 Web。
 
 在这里分享项目实践、工具探索和学习记录。
+
+[精选项目](#精选项目) · [入门指南](https://mashedpotato817.github.io/software-handbook/) · [全部仓库](https://github.com/MashedPotato817?tab=repositories)
 
 ## 精选项目
 
@@ -36,19 +36,19 @@
 
 **语言与 Web**
 
-![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white)
+![C](https://img.shields.io/badge/C-203448?style=flat-square&logo=c&logoColor=60A5FA)
+![Python](https://img.shields.io/badge/Python-203448?style=flat-square&logo=python&logoColor=60A5FA)
+![TypeScript](https://img.shields.io/badge/TypeScript-203448?style=flat-square&logo=typescript&logoColor=60A5FA)
+![Node.js](https://img.shields.io/badge/Node.js-203448?style=flat-square&logo=nodedotjs&logoColor=60A5FA)
+![React](https://img.shields.io/badge/React-203448?style=flat-square&logo=react&logoColor=60A5FA)
+![Three.js](https://img.shields.io/badge/Three.js-203448?style=flat-square&logo=threedotjs&logoColor=60A5FA)
 
 **嵌入式与机器学习**
 
-![STM32](https://img.shields.io/badge/STM32-03234B?style=flat-square&logo=stmicroelectronics&logoColor=white)
-![CanMV K230](https://img.shields.io/badge/CanMV_K230-009688?style=flat-square)
-![MQTT](https://img.shields.io/badge/MQTT-660066?style=flat-square&logo=mqtt&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![STM32](https://img.shields.io/badge/STM32-203448?style=flat-square&logo=stmicroelectronics&logoColor=2DD4BF)
+![CanMV K230](https://img.shields.io/badge/CanMV_K230-203448?style=flat-square)
+![MQTT](https://img.shields.io/badge/MQTT-203448?style=flat-square&logo=mqtt&logoColor=2DD4BF)
+![PyTorch](https://img.shields.io/badge/PyTorch-203448?style=flat-square&logo=pytorch&logoColor=2DD4BF)
 
 ## GitHub 活动
 

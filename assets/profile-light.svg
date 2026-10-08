@@ -1,63 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="250" viewBox="0 0 900 250" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="190" viewBox="0 0 900 190" role="img" aria-labelledby="title description">
   <title id="title">MashedPotato817</title>
-  <desc id="description">蓝绿线路连接开发工具、芯片与 Web 图标。装饰流光播放两轮后停止，支持减少动态效果。</desc>
+  <desc id="description">蓝绿线路连接终端、芯片与 Web，左上角是土豆线条标记。</desc>
   <defs>
-    <linearGradient id="surface" x2="1" y2="1">
-      <stop stop-color="#f0f7ff"/>
-      <stop offset="1" stop-color="#effcf6"/>
-    </linearGradient>
-    <linearGradient id="accent">
-      <stop stop-color="#2563eb"/>
-      <stop offset="1" stop-color="#0d9488"/>
-    </linearGradient>
-    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
-      <circle cx="14" cy="14" r="1" fill="#bfd4e3"/>
-    </pattern>
-    <clipPath id="frame"><rect x="1" y="1" width="898" height="248" rx="20"/></clipPath>
+    <linearGradient id="surface" x2="1" y2="1"><stop stop-color="#f0f7ff"/><stop offset="1" stop-color="#effcf6"/></linearGradient>
+    <linearGradient id="accent" gradientUnits="userSpaceOnUse" x1="580" x2="850"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#0d9488"/></linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="12" cy="12" r="1" fill="#bfd4e3"/></pattern>
+    <clipPath id="frame"><rect x="1" y="1" width="898" height="188" rx="18"/></clipPath>
   </defs>
   <style>
-    .signal { stroke-dasharray: 18 260; animation: flow 6s linear 2; }
-    @keyframes flow { from { stroke-dashoffset: 278; } to { stroke-dashoffset: 0; } }
+    .signal { stroke-dasharray: 12 72; animation: flow 6s linear 2; }
+    @keyframes flow { from { stroke-dashoffset: 84; } to { stroke-dashoffset: 0; } }
     @media (prefers-reduced-motion: reduce) { .signal { animation: none; } }
   </style>
   <g clip-path="url(#frame)">
-    <rect width="900" height="250" fill="url(#surface)"/>
-    <rect x="540" width="360" height="250" fill="url(#grid)" opacity="0.6"/>
-    <circle cx="770" cy="126" r="148" fill="none" stroke="#cce9e3"/>
-    <circle cx="770" cy="126" r="112" fill="none" stroke="#cce9e3" stroke-dasharray="3 8"/>
-    <rect x="38" y="43" width="42" height="4" rx="2" fill="url(#accent)"/>
-    <g font-family="Segoe UI, Arial, sans-serif">
-      <text x="38" y="121" fill="#142d45" font-size="52" font-weight="700" letter-spacing="-1.8">MashedPotato817</text>
-      <text x="40" y="163" fill="#42627a" font-size="20" letter-spacing="1.5">AI TOOLS / EMBEDDED / WEB</text>
+    <rect width="900" height="190" fill="url(#surface)"/>
+    <rect x="546" width="354" height="190" fill="url(#grid)" opacity="0.6"/>
+    <circle cx="715" cy="96" r="124" fill="none" stroke="#cce9e3"/>
+    <g transform="translate(40 23)" fill="none" stroke="#0d9488" stroke-width="1.7" stroke-linecap="round">
+      <path d="M7 2 C14-2 23 2 24 9 C26 17 17 23 9 22 C1 22-3 14 1 8 Z"/>
+      <path d="M7 8 h.1 M17 6 h.1 M18 16 h.1 M6 16 h.1"/>
     </g>
-    <path d="M40 200 H500" stroke="#c3dedc"/>
-    <path d="M40 200 H146" stroke="url(#accent)" stroke-width="3" stroke-linecap="round"/>
+    <g font-family="Segoe UI, Arial, sans-serif">
+      <text x="38" y="101" fill="#142d45" font-size="48" font-weight="700" letter-spacing="-1.5">MashedPotato817</text>
+      <text x="40" y="137" fill="#42627a" font-size="18" letter-spacing="1.2">AI TOOLS / EMBEDDED / WEB</text>
+    </g>
+    <path d="M40 161 H500" stroke="#c3dedc"/>
+    <path d="M40 161 H112" stroke="#0d9488" stroke-width="3" stroke-linecap="round"/>
     <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <g stroke="#b6d8de" stroke-width="2">
-        <path d="M640 75 H689 Q702 75 702 88 V112 H745"/>
-        <path d="M640 185 H689 Q702 185 702 172 V142 H745"/>
-        <path d="M803 127 H836 V62 H877"/>
-        <path d="M803 127 H852 V207 H877"/>
+      <path d="M626 95 H676 M744 95 H794" stroke="#b6d8de" stroke-width="2"/>
+      <g class="signal" stroke="url(#accent)" stroke-width="3"><path d="M626 95 H676 M744 95 H794"/></g>
+      <g id="terminal">
+        <rect x="568" y="66" width="58" height="58" rx="15" fill="#ffffff" stroke="#bcd7ec"/>
+        <path d="m584 85 9 10-9 10 m15 0 h11" stroke="#2563eb" stroke-width="2.5"/>
       </g>
-      <g class="signal" stroke="url(#accent)" stroke-width="3">
-        <path d="M640 75 H689 Q702 75 702 88 V112 H745"/>
-        <path d="M640 185 H689 Q702 185 702 172 V142 H745"/>
-        <path d="M803 127 H836 V62 H877"/>
+      <g id="chip">
+        <rect x="676" y="61" width="68" height="68" rx="18" fill="#ffffff" stroke="#a9dacf"/>
+        <g stroke="#0d9488" stroke-width="2">
+          <rect x="696" y="81" width="28" height="28" rx="4"/>
+          <path d="M704 75 V81 M716 75 V81 M704 109 V115 M716 109 V115 M690 89 H696 M690 101 H696 M724 89 H730 M724 101 H730"/>
+          <rect x="705" y="90" width="10" height="10" rx="1.5"/>
+        </g>
       </g>
-      <rect x="582" y="46" width="58" height="58" rx="15" fill="#ffffff" stroke="#bcd7ec"/>
-      <path d="m600 65 9 10-9 10 m15 0 h10" stroke="#2563eb" stroke-width="2.5"/>
-      <rect x="582" y="156" width="58" height="58" rx="15" fill="#ffffff" stroke="#bcd7ec"/>
-      <rect x="596" y="170" width="30" height="28" rx="4" stroke="#2563eb" stroke-width="2"/>
-      <path d="M596 179 H626 M602 175 H603 M608 175 H609 m-2 10-4 4 4 4 m8-8 4 4-4 4" stroke="#2563eb" stroke-width="2"/>
-      <rect x="735" y="88" width="78" height="78" rx="20" fill="#ffffff" stroke="#a9dacf"/>
-      <g stroke="#0d9488" stroke-width="2.5">
-        <rect x="757" y="110" width="34" height="34" rx="5"/>
-        <path d="M767 103 V110 M781 103 V110 M767 144 V151 M781 144 V151 M750 120 H757 M750 134 H757 M791 120 H798 M791 134 H798"/>
-        <rect x="768" y="121" width="12" height="12" rx="2"/>
+      <g id="web">
+        <rect x="794" y="66" width="58" height="58" rx="15" fill="#ffffff" stroke="#bcd7ec"/>
+        <g stroke="#2563eb" stroke-width="2">
+          <rect x="808" y="81" width="30" height="28" rx="4"/>
+          <path d="M808 90 H838 M814 85 H815 M820 85 H821 m-2 11-4 4 4 4 m8-8 4 4-4 4"/>
+        </g>
       </g>
-      <circle cx="877" cy="62" r="4" fill="#0d9488"/>
-      <circle cx="877" cy="207" r="4" fill="#2563eb"/>
     </g>
   </g>
-  <rect x="1" y="1" width="898" height="248" rx="20" fill="none" stroke="#d7e7ed"/>
+  <rect x="1" y="1" width="898" height="188" rx="18" fill="none" stroke="#d7e7ed"/>
 </svg>
