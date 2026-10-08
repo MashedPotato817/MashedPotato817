@@ -16,7 +16,17 @@
 
 ### <img src="assets/project-tools.svg" width="24" height="24" alt=""> [dsh-git-plugin](https://github.com/MashedPotato817/dsh-git-plugin) · 开发工具
 
-为 DeepSeek Harness 提供 Git 面板、命令与仓库检查工具，将 Git 操作与仓库状态查看融入开发流程。
+让 Git 工作流留在 DeepSeek Harness 会话里：Web Git 面板、5 个斜杠命令和 4 个模型只读工具，支持查看改动、管理分支与 stash，以及提交前检查。
+
+[安装与使用](https://github.com/MashedPotato817/dsh-git-plugin/blob/main/README_ZH.md) · [面板指南](https://github.com/MashedPotato817/dsh-git-plugin/blob/main/docs/web-panel_ZH.md)
+
+<details>
+  <summary>查看真实 Git 操作面板</summary>
+  <p>独立测试仓库中的 DSH Web Git 面板，包含暂存、提交、分支与 stash 操作。点击截图查看原图。</p>
+  <a href="assets/dsh-git-panel.png">
+    <img src="assets/dsh-git-panel.png" width="343" alt="真实 DSH Web Git 面板：文件暂存、提交说明、分支切换与 stash 管理">
+  </a>
+</details>
 
 ### <img src="assets/project-embedded.svg" width="24" height="24" alt=""> [CargoTracker-STM32H7](https://github.com/MashedPotato817/CargoTracker-STM32H7) · 嵌入式应用
 
@@ -29,6 +39,9 @@
 ## 近期关注
 
 正在整理 [software-handbook](https://github.com/MashedPotato817/software-handbook)：面向 PC 新手的中文入门指南，从软件安装延伸到开发工具与 AI 工具的使用。
+
+- [在线阅读](https://mashedpotato817.github.io/software-handbook/)：按软件与工具分类浏览，首批内容以 Windows 为主。
+- [Git：Windows 安装、必要配置与验证](https://mashedpotato817.github.io/software-handbook/pages/git/install.html)：试写草稿，待维护者修改与人工安装验证。
 
 ## 技术栈
 
