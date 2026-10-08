@@ -48,6 +48,8 @@ class ActivityTests(unittest.TestCase):
                 animated = ET.fromstring(render_svg("tester", DAYS, list(range(31)), dark, compact))
                 static = ET.fromstring(render_svg("tester", DAYS, list(range(31)), dark, compact, animated=False))
                 self.assertIsNotNone(animated.find("svg:style", NS))
+                self.assertIn("10s", animated.find("svg:style", NS).text)
+                self.assertIn("infinite", animated.find("svg:style", NS).text)
                 self.assertIsNone(static.find("svg:style", NS))
                 self.assertEqual([p.find("svg:title", NS).text for p in animated.findall(".//svg:rect[@class='day-bar']", NS)], [p.find("svg:title", NS).text for p in static.findall(".//svg:rect[@class='day-bar']", NS)])
                 self.assertEqual(static.find(".//svg:text[@id='active-days']", NS).text, "30")

@@ -59,7 +59,7 @@ def render_svg(username, days, counts, dark, compact=False, animated=True):
         f'<rect width="{width}" height="260" rx="12" fill="{background}"/>',
     ]
     if animated:
-        svg.append('<style>@keyframes light-up { from { opacity: .18; } to { opacity: 1; } } .day-bar { animation: light-up .6s ease-out both; } @media (prefers-reduced-motion: reduce) { .day-bar { animation: none; } }</style>')
+        svg.append('<style>@keyframes light-up { 0% { opacity: .18; } 6%, 100% { opacity: 1; } } .day-bar { animation: light-up 10s ease-out infinite both; } @media (prefers-reduced-motion: reduce) { .day-bar { animation: none; } }</style>')
     svg.extend([
         f'<g font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" fill="{foreground}">',
         f'<text x="{margin}" y="29" font-size="18" font-weight="600">GitHub 贡献节奏 · 近 31 天</text>',
