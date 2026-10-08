@@ -1,2 +1,3 @@
 # 临时文件
-tmp/
+tmp/*
+!tmp/.gitkeep
