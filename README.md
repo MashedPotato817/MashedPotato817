@@ -1,20 +1,28 @@
 # Hi, I'm MashedPotato817
 
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="assets/profile-dark-static.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/profile-light-static.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/profile-light.svg">
+  <img alt="MashedPotato817 — AI 开发工具、嵌入式与 Web" src="assets/profile-light.svg" width="100%">
+</picture>
+
 南京师范大学本科生，关注 AI 开发工具、嵌入式与 Web。
 
 在这里分享项目实践、工具探索和学习记录。
 
 ## 精选项目
 
-### [dsh-git-plugin](https://github.com/MashedPotato817/dsh-git-plugin) · 开发工具
+### <img src="assets/project-tools.svg" width="24" height="24" alt=""> [dsh-git-plugin](https://github.com/MashedPotato817/dsh-git-plugin) · 开发工具
 
 为 DeepSeek Harness 提供 Git 面板、命令与仓库检查工具，将 Git 操作与仓库状态查看融入开发流程。
 
-### [CargoTracker-STM32H7](https://github.com/MashedPotato817/CargoTracker-STM32H7) · 嵌入式应用
+### <img src="assets/project-embedded.svg" width="24" height="24" alt=""> [CargoTracker-STM32H7](https://github.com/MashedPotato817/CargoTracker-STM32H7) · 嵌入式应用
 
 基于 STM32 的智能货物追踪系统。
 
-### [kexieweb](https://github.com/MashedPotato817/kexieweb) · Web 实践
+### <img src="assets/project-web.svg" width="24" height="24" alt=""> [kexieweb](https://github.com/MashedPotato817/kexieweb) · Web 实践
 
 校园科学技术协会网站，集中展示组织介绍、招新信息与活动资料。
 
