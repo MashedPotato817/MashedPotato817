@@ -10,6 +10,24 @@
 
 在这里分享项目实践、工具探索和学习记录。
 
+## 技术栈
+
+**语言与 Web**
+
+![C](https://img.shields.io/badge/C-203448?style=flat-square&logo=c&logoColor=60A5FA)
+![Python](https://img.shields.io/badge/Python-203448?style=flat-square&logo=python&logoColor=60A5FA)
+![TypeScript](https://img.shields.io/badge/TypeScript-203448?style=flat-square&logo=typescript&logoColor=60A5FA)
+![Node.js](https://img.shields.io/badge/Node.js-203448?style=flat-square&logo=nodedotjs&logoColor=60A5FA)
+![React](https://img.shields.io/badge/React-203448?style=flat-square&logo=react&logoColor=60A5FA)
+![Three.js](https://img.shields.io/badge/Three.js-203448?style=flat-square&logo=threedotjs&logoColor=60A5FA)
+
+**嵌入式与机器学习**
+
+![STM32](https://img.shields.io/badge/STM32-203448?style=flat-square&logo=stmicroelectronics&logoColor=2DD4BF)
+![CanMV K230](https://img.shields.io/badge/CanMV_K230-203448?style=flat-square)
+![MQTT](https://img.shields.io/badge/MQTT-203448?style=flat-square&logo=mqtt&logoColor=2DD4BF)
+![PyTorch](https://img.shields.io/badge/PyTorch-203448?style=flat-square&logo=pytorch&logoColor=2DD4BF)
+
 ## 精选项目
 
 ### <img src="assets/project-tools.svg" width="24" height="24" alt=""> [dsh-git-plugin](https://github.com/MashedPotato817/dsh-git-plugin) · 开发工具
@@ -40,24 +58,6 @@
 
 - [在线阅读](https://mashedpotato817.github.io/software-handbook/)：按软件与工具分类浏览，首批内容以 Windows 为主。
 - [Git：Windows 安装、必要配置与验证](https://mashedpotato817.github.io/software-handbook/pages/git/install.html)：试写草稿，待维护者修改与人工安装验证。
-
-## 技术栈
-
-**语言与 Web**
-
-![C](https://img.shields.io/badge/C-203448?style=flat-square&logo=c&logoColor=60A5FA)
-![Python](https://img.shields.io/badge/Python-203448?style=flat-square&logo=python&logoColor=60A5FA)
-![TypeScript](https://img.shields.io/badge/TypeScript-203448?style=flat-square&logo=typescript&logoColor=60A5FA)
-![Node.js](https://img.shields.io/badge/Node.js-203448?style=flat-square&logo=nodedotjs&logoColor=60A5FA)
-![React](https://img.shields.io/badge/React-203448?style=flat-square&logo=react&logoColor=60A5FA)
-![Three.js](https://img.shields.io/badge/Three.js-203448?style=flat-square&logo=threedotjs&logoColor=60A5FA)
-
-**嵌入式与机器学习**
-
-![STM32](https://img.shields.io/badge/STM32-203448?style=flat-square&logo=stmicroelectronics&logoColor=2DD4BF)
-![CanMV K230](https://img.shields.io/badge/CanMV_K230-203448?style=flat-square)
-![MQTT](https://img.shields.io/badge/MQTT-203448?style=flat-square&logo=mqtt&logoColor=2DD4BF)
-![PyTorch](https://img.shields.io/badge/PyTorch-203448?style=flat-square&logo=pytorch&logoColor=2DD4BF)
 
 ## GitHub 活动
 
